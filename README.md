@@ -1,12 +1,12 @@
 # Inheritance
-**What it is: ** One class (child) can use the properties and methods of another class (parent)
+**What it is:** One class (child) can use the properties and methods of another class (parent)
 ## Real-life example:
 A **car** is a type of **Vehicle**. All cars are vehicles, so they inherit the general properties of a variable(like wheels, engine)
 
 
 # Encapsulation
 
-**What it is: ** Keeping internal details of an object hidden from the outside. You use methods to interact with data, not direct access.
+**What it is:** Keeping internal details of an object hidden from the outside. You use methods to interact with data, not direct access.
 
 ## Real-life example:
 You use a **remote control** to turn the TV on or off. You don't mess with the TV's internal circuits.
