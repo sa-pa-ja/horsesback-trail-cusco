@@ -41,6 +41,41 @@ class Cat(Animal):
 pet = Dog()
 pet.make_sound()
 
+class Bird():
+    def speak(self):
+        print("Chirp")
+        
+class Human():
+    def speak(self):
+        print("Hello")
+        
+def let_it_speak(creature):
+    creature.speak()
+    
+    
+let_it_speak(Bird()) #Output: Chirp
+let_it_speak(Human()) #Output: Hello
+
+import asyncio
+
+async def boil_water():
+    print("boiling water...")
+    await asyncio.sleep(3) #simulate waiting
+    print("Water is ready!!")
+    
+async def chop_vaggies():
+    print("Chopping vaggies...")
+    
+async def main():
+    await asyncio.gather(
+        boil_water(),
+        chop_vaggies()
+    )
+
+asyncio.run(main())
+
+
+
 
 
 
