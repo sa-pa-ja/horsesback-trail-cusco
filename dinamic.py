@@ -75,8 +75,37 @@ async def main():
 asyncio.run(main())
 
 
+# Example with try, except, finally
+
+try:
+    x = 10/0
+except ZeroDivisionError:
+    print("You can't divide by zero")
+finally:
+    print("This will always run.")
+
+async def risky_task():
+    try:
+        print("Doing something risky...")
+        await asyncio.sleep(1)
+        raise ValueError("Oops!!") # Force an error
+    except ValueError as e:
+        print(f"Caught an error: {e}")
+    finally:
+        print("Cleaning up...")
+        
+asyncio.run(risky_task())
 
 
 
-
-
+async def order_pizza():
+    print("Ordering pizza...")
+    await asyncio.sleep(3)
+    print("Pizza is ready")
+async def watch_tv():
+    print("Watching tv...")
+    await asyncio.sleep(4)
+    print("Finessed tha tv chanel") 
+async def main():
+    await asyncio.gather(order_pizza(), watch_tv())
+asyncio.run(main())       
